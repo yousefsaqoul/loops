@@ -72,3 +72,37 @@ function wordPrint() {
 //================================================================================//
 
 console.log('%c_____________lev 2_1 loop for loop Array ________________', 'color:darkred')
+
+function imageArray() {
+    let retArray2 = [];
+    for (let i = 0; i < 101; i++)
+        if (i <= 9) {
+            retArray2.push("image_00" + i + ".jpg")
+        } else if (i < 100 && i > 9) {
+            retArray2.push("image_0" + i + ".jpg")
+        } else {
+            retArray2.push("image_" + i + ".jpg")
+        }
+    console.log(retArray2)
+}
+imageArray()
+
+
+//================================================================================//
+
+console.log('%c_____________lev 2_2 loop with input ________________', 'color:darkred')
+
+let inputLoop = document.getElementById('inputLoop')
+let resultLoop = document.getElementById('resultLoop');
+let loopText = ["L", "p"]
+
+function looop() {
+    if (inputLoop.value == 0) {
+        resultLoop.innerHTML = "Lp"
+    } else {
+        for (let i = 0; i < inputLoop.value; i++) {
+            loopText.splice(1, 0, "o")
+        }
+    }
+    resultLoop.innerHTML = loopText.join('')
+}
